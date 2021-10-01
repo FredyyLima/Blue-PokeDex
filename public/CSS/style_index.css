@@ -1,0 +1,35 @@
+header{
+    color:blueviolet;
+}
+h1{
+    margin-left: 650px;
+    margin-top: 0px;
+}
+body{
+    background-image: url("../img/Lugia&Fenix.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+button{
+    background: none;
+    cursor: pointer;
+    border-spacing: 6px;
+}
+
+/*Class chama com .(ponto)*/
+
+/*ID chama com #(hashtag)*/
+#pokedex{
+    margin-left: 535px;
+    padding-bottom: 0px;
+}
+#muda_pag{
+    margin-left: 980px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+div.imagem_index{
+	display: inline-block;
+}

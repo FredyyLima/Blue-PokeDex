@@ -1,0 +1,58 @@
+h1{
+    margin-left: 650px;
+    margin-top: 0px;
+}
+body{
+    background-color: red;
+    background-image: url("../img/Picachu.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+label {
+    color: rgb(233, 211, 17);
+    margin-left: 300px;
+    font-style: normal;
+    font-display: sans-serif;
+    text-shadow: 3px 2px rgb(4, 0, 255);
+    font-size: 45px;
+
+}
+input {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+}
+button{
+    margin-left:700px;
+}
+
+/*Class chama com .(ponto)*/
+
+/*ID chama com #(hashtag)*/
+#poke_nome{
+    margin-left:100px;
+}
+#poke_tipo{
+    margin-left:126px;
+}
+#poke_image{
+    margin-left:62px;
+}
+#poke_descricao{
+    margin-left:30px;
+}
+#poke_altura{
+    margin-left:95px;
+}
+#poke_peso{
+    margin-left:125px;
+}
+#poke_categoria{
+    margin-left:35px;
+}
+#poke_habilidade{
+    margin-left:12px;
+}
+

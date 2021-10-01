@@ -1,0 +1,15 @@
+h1{
+    margin-left: 650px;
+    margin-top: 0px;
+}
+body{
+    background-color: aqua;
+    background-image: url("../img/mewtow.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*Class chama com .(ponto)*/
+
+/*ID chama com #(hashtag)*/
