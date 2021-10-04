@@ -5,44 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/style_cadastro.css">
+    <title>Cadastro</title>
 </head>
 <h1><img src="/img/logo_pokemon.png" alt="Logo Pokemon" width ="500px" height = "227px"></h1>
 <body>
 <form action="/resultado" method="POST">
-
+<div class= "container">
     <div>
-        <label id="label_nome" for="nome_poke">Nome do Pokemon: </label>
+        <label class="espaco" for="nome_poke">Nome do Pokemon: </label>
         <input type="text" name="Poke_nome" id="poke_nome" placeholder="Nome do Pokemon" required>
     </div>
-
     <div>
-        <label for="tipo">Tipo do Pokemon: </label>
+        <label class="espaco" for="tipo">Tipo do Pokemon: </label>
         <input type="text" name="tipo" id="poke_tipo" placeholder="Tipo do Pokemon" required>
     </div>
     <div>
-        <label for="imagem">Imagem do Pokemon: </label>
+        <label class="espaco" for="imagem">Imagem do Pokemon: </label>
         <input type="file" name="imagem" id="poke_image" placeholder="caminho da imagem" required>
     </div>
     <div>
-        <label for="descrição">Descrição do Pokemon: </label>
-        <input type="text" name="descrição" id="poke_descricao" placeholder="Descrição do Pokemon" required>
+        <label class="espaco" for="descricao">Descrição do Pokemon: </label>
+        <input type="text" name="descricao" id="poke_descricao" placeholder="Descrição do Pokemon" required>
     </div>
     <div>
-        <label for="altura">Altura do Pokemon: </label>
+        <label class="espaco" for="altura">Altura do Pokemon: </label>
         <input type="text" name="altura" id="poke_altura" placeholder="Altura do Pokemon" required>
     </div>
     <div>
-        <label for="peso">Peso do Pokemon: </label>
+        <label class="espaco" for="peso">Peso do Pokemon: </label>
         <input type="text" name="peso" id="poke_peso" placeholder="Peso do Pokemon" required>
     </div>
     <div>
-        <label for="categoria">Categoria do Pokemon: </label>
+        <label class="espaco" for="categoria">Categoria do Pokemon: </label>
         <input type="text" name="categoria" id="poke_categoria" placeholder="Categoria do Pokemon" required>
     </div>
     <div>
-        <label for="Habilidade">Habilidade do Pokemon: </label>
+        <label class="espaco" for="Habilidade">Habilidade do Pokemon: </label>
         <input type="text" name="habilidade" id="poke_habilidade" placeholder="Habilidade do Pokemon" required>
     </div>
+</div>
     <button type="submit">Cadastre o seu Pokemon!</button>
 
 </form>

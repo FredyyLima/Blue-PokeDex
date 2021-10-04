@@ -2,8 +2,9 @@ header{
     color:blueviolet;
 }
 h1{
-    margin-left: 650px;
+    display: flex;
     margin-top: 0px;
+    justify-content:flex-start;
 }
 body{
     background-image: url("../img/Lugia&Fenix.jpg");
@@ -11,25 +12,92 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-button{
-    background: none;
+a{
     cursor: pointer;
-    border-spacing: 6px;
+    border: 10px;
 }
 
 /*Class chama com .(ponto)*/
+.container{
+    position:relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+    justify-content: flex-end;
+    justify-content: space-between 100px;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+}
+.pokemon{
+    position:relative;
+    z-index: 2;
+    margin-right: 900px;
+    padding-bottom: 295px;
+    flex-direction: column;
+}
+.pokemon_desc{
+    position:absolute;
+    z-index: 2;
+    margin-right: 940px;
+    padding-top: 100px;
+}
+.imagem_index{
+    position:relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+    justify-content: flex-end;
+    justify-content: space-between 100px;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+}
+
 
 /*ID chama com #(hashtag)*/
 #pokedex{
-    margin-left: 535px;
+    margin-left: 0px; /*535*/
     padding-bottom: 0px;
 }
 #muda_pag{
-    margin-left: 980px;
+    margin-left: 0px; /*980*/
     margin-top: 0px;
     padding-top: 0px;
 }
+#muda_pag{
+    background: none;
+    cursor: pointer;
+    width: 580px;
+    height: 415px;
+    border: none;
+}
 
-div.imagem_index{
-	display: inline-block;
+section#mensagem {
+    padding: 1.5rem;
+    background-color: rgb(197, 255, 214);
+    color: #004d04;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
 }

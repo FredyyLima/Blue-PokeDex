@@ -18,12 +18,41 @@ label {
     font-size: 45px;
 
 }
-input {
+input [type=text]{
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 50px;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #000dc8;
+    -moz-box-shadow: 1px 1px 2px #000dc8;
+    -webkit-box-shadow: 1px 1px 2px #000dc8;
+    background: #f8e802; 
+    border:1px solid #fbff05;
+    width:150px;
 }
+textarea{
+    border: 1px solid #000000;
+    background:#1100ff;
+    width:150px;
+    height:100px;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #000dc8;
+    -moz-box-shadow: 1px 1px 2px #000dc8;
+    -webkit-box-shadow: 1px 1px 2px #000dc8;
+}
+input[type=text]:hover, textarea:hover{
+    background: #ffee00;
+    border:1px solid #0400ff;
+}
+input[type=submit]{
+    background:#006699;
+    color:#ffffff;
+    }
 button{
     margin-left:700px;
 }
@@ -31,28 +60,12 @@ button{
 /*Class chama com .(ponto)*/
 
 /*ID chama com #(hashtag)*/
-#poke_nome{
-    margin-left:100px;
-}
-#poke_tipo{
-    margin-left:126px;
-}
-#poke_image{
-    margin-left:62px;
-}
-#poke_descricao{
-    margin-left:30px;
-}
-#poke_altura{
-    margin-left:95px;
-}
-#poke_peso{
-    margin-left:125px;
-}
-#poke_categoria{
-    margin-left:35px;
-}
-#poke_habilidade{
-    margin-left:12px;
+/*colocar esses elementos em flexbox e reconfigurar*/
+
+
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:right;
 }
 

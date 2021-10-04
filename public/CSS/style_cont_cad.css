@@ -1,15 +1,30 @@
 h1{
-    margin-left: 650px;
+    margin-left: 0px;
     margin-top: 0px;
 }
 body{
-    background-color: aqua;
+    background-color: rgb(183, 0, 255);
     background-image: url("../img/mewtow.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: rgb(233, 211, 17);
+    margin-left: 300px;
+    font-style: normal;
+    font-display: sans-serif;
+    text-shadow: 3px 2px rgb(4, 0, 255);
+    font-size: 45px;
+    text-align: center;
+}
+.texto{
+    color:rgb(255, 255, 255);
+    text-shadow: 3px 2px rgb(4, 0, 255);
 }
 
 /*Class chama com .(ponto)*/
 
+.container{
+    display: flex;
+    justify-content: center;
+}
 /*ID chama com #(hashtag)*/
