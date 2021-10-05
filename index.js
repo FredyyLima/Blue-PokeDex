@@ -38,7 +38,7 @@ let mensagem = ""
   //});
 
 // Adicionando a const port e uma arow function de callback para mostrar no console que o servidor está rodando.
-app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}/index`));
+
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //app.listen(3000);
 
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
 
   setTimeout(() =>{
     mensagem = "";
@@ -73,7 +73,7 @@ app.post("/resultado", (req, res) => {
   };
   pokedex.push(pokemon);
   mensagem = `O Pokemon ${Poke_nome} foi cadastrado com sucesso!`
-  res.redirect("/index");
+  res.redirect("/");
 })
 
 app.get("/detalhes/:ind", (req, res) => {
@@ -81,8 +81,4 @@ app.get("/detalhes/:ind", (req, res) => {
   const pokemons = pokedex[indice];
   res.render("detalhes", { pokemon: pokemons });
 });
-
-app.get("/index", (req,res) => {
-  res.send("cadastro")
-})
-
+app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
