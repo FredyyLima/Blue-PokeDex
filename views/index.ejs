@@ -7,42 +7,38 @@
     <link rel="stylesheet" href="/CSS/style_index.css">
     <title>Pokemon</title>
 </head>
-        <% if(mensagem != "") { %>
-            <section id="mensagem">
-                <p><%= mensagem %></p> <span id="close">&times;</span>
-            </section>
-        <% } %>
-        <h1><img src="/img/logo_pokemon.png" alt="Logo Pokemon" width ="500px" height = "227px"></h1>
-        
 <body>
-    <form action="/cadastro" method="get">
- 
-        <div class= "imagem_index">
-            <button type="submit" id= "muda_pag"> <img src="/img/Pikachu_muda_pag.png" alt="Pikachu com um balão dizendo PIKA! PIKA! PIKA! TEM MAIS COISA POR AQUI! CLICA EM MIM PARA MUDARMOS DE PÁGINA! PIKA! CHU!" width ="580px" height = "415px"></button>
-    </div>
-    <div class= "container">
-    <div class="pokemon">
-    <ul>
-            <%pokedex.forEach(item => { %>
-                
-                    <img id="img1" src= <%=item.img %> alt= <%= item.nome %> height="150px"></br>
-            <% }) %>
-        </ul>
-    </div>  
-        <div class="pokemon_desc">
-            <ul>
-                    <%pokedex.forEach(item => { %>
-                        Nome: <%= item.nome %>. </br> Tipo: <%= item.tipo %>      
-                    <% }) %>
-                </ul>
-    </div>     
-    
-</div>
-    <footer>
-        <p>Todos os direitos reservados Fredy_Lima® 2021</p>
-    </footer>
-</form>
-<script type="text/javascript" src="./js/script.js"></script> 
-</body>
+    <header>
+            <% if(mensagem != "") { %>
+                <section id="mensagem">
+                    <p><%= mensagem %></p> <span id="close">&times;</span>
+                </section>
+            <% } %>
+    </header>
 
+    <h1><img src="/img/logo_pokemon.png" alt="Logo Pokemon" width ="500px" height = "227px"></h1>
+    
+    <section class= "container">
+        <section class= "imagem_index">  
+            <a href="/cadastro" id= "muda_pag"><img src="/img/Pikachu_muda_pag.png" alt="Pikachu com um balão dizendo PIKA! PIKA! PIKA! TEM MAIS COISA POR AQUI! CLICA EM MIM PARA MUDARMOS DE PÁGINA! PIKA! CHU!" width ="580px" height = "415px"></a>
+        </section>
+        <section class="pokemon">
+        <ul>
+            <form action="/detalhes" method="get">
+                <% pokedex.forEach(item => { %></br></br>
+                    <a href="/detalhes/<%= pokedex.indexOf(item) %>" id = "botao_poke">
+                        <%= item.nome %>
+                    </a></br></br>
+                    <img src = <%= item.img %> height="150px">
+                <% }) %>
+            </form>
+            </ul>
+        </section>
+    </section>
+    
+    <script type="text/javascript" src="./js/script.js"></script> 
+</body>
+<footer>
+    <p>Todos os direitos reservados Fredy_Lima® 2021</p>
+</footer>
 </html>

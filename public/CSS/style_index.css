@@ -1,16 +1,17 @@
 header{
     color:blueviolet;
+    position: absolute;
 }
 h1{
-    display: flex;
+    margin-left: 0px;
     margin-top: 0px;
-    justify-content:flex-start;
 }
 body{
     background-image: url("../img/Lugia&Fenix.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    text-align: center;
 }
 a{
     cursor: pointer;
@@ -20,39 +21,30 @@ a{
 /*Class chama com .(ponto)*/
 .container{
     position:relative;
-    z-index: 1;
+    z-index: 0;
     display: flex;
     align-items: flex-start;
     gap: 0px;
     justify-content: flex-end;
-    justify-content: space-between 100px;
     flex-wrap: wrap;
     flex-flow: column wrap;
-}
-.pokemon{
-    position:relative;
-    z-index: 2;
-    margin-right: 900px;
-    padding-bottom: 295px;
-    flex-direction: column;
-}
-.pokemon_desc{
-    position:absolute;
-    z-index: 2;
-    margin-right: 940px;
-    padding-top: 100px;
 }
 .imagem_index{
-    position:relative;
+    position:absolute;
     z-index: 1;
-    display: flex;
-    align-items: flex-start;
-    gap: 0px;
-    justify-content: flex-end;
-    justify-content: space-between 100px;
+    align-items: flex-end;
     flex-wrap: wrap;
-    flex-flow: column wrap;
+    flex-direction: row;
+    padding-left: 1190px;
 }
+.pokemon{
+    position:start;
+    z-index: 2;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+
 
 
 /*ID chama com #(hashtag)*/
@@ -100,4 +92,12 @@ span#close {
 span#close:hover{
     color: rgb(255, 0, 0);
     transform: scale(1.5);
+}
+#botao_poke{
+    border: 4px solid;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: medium;
+    background-color: rgb(233, 211, 17);
+    border-color: rgb(4, 0, 255);
 }

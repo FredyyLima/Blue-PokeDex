@@ -8,14 +8,18 @@ app.set("view engine", "ejs");
 const path = require("path");
 app.use(express.urlencoded());
 
-const pokedex = [{nome: "Charmander",
+const pokedex = 
+[
+  {nome: "Charmander",
   tipo: "Fogo",
-  img: "../img/charmander.gif",
-  descricao: "fogo",
-  altura: 1.5,
-  peso: 10.5,
-  categoria: "lutador",
-  habilidade: "Fire Blast"}];
+  img: "https://bd02d156-a-62cb3a1a-s-sites.googlegroups.com/site/desenho2013/charmander/charmander.gif?attachauth=ANoY7crjP64Owk-aEjbuHD-_-Gm40yJg-6Sjs120ldjyeaLiYEgjKbY-8gZbWL5Sroh4c2oTwj2_qd-a5th2ET19f0SWMrWhV1jEJjoestGH1I-5T0HCROiSg4CTNpkBh-2v97rjaaRK0i8lT__UcDydygI8p-YN2o4B8fg7376jigtQSjtJjTQinDaAQCueYiEX4hSB3o6LeSExXijT86B-As9t6KSKLDRGGWybUy8UDiWn7feTCIU%3D&attredirects=0",
+  descricao: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
+  altura: 0.6,
+  peso: 8.5,
+  categoria: "Lagarto",
+  habilidade: "Chama"}
+]
+const pokemon = {}
 let mensagem = ""
 // Rota principal que recebe uma função de callback que recebe dois parametros: 
 // req de requisição
@@ -57,11 +61,10 @@ app.get("/cadastro", (req, res) => {
 
 app.post("/resultado", (req, res) => {
   const {Poke_nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;
-  /*const site = {nome: Poke_nome, tipo: tipo, imagem: imagem, descricao: descricao, altura: altura, peso: peso, categoria: categoria, habilidade: habilidade};*/
   const pokemon = {
     nome: Poke_nome,
     tipo: tipo,
-    img: "/img/"+imagem,
+    img: imagem,
     descricao: descricao,
     altura: altura,
     peso: peso,
@@ -71,10 +74,13 @@ app.post("/resultado", (req, res) => {
   pokedex.push(pokemon);
   mensagem = `O Pokemon ${Poke_nome} foi cadastrado com sucesso!`
   res.redirect("/index");
-  /*res.render("cont_cad", {nome: pokemon.nome, tipo: pokemon.tipo, imagem: pokemon.img, descricao: pokemon.descricao, altura: pokemon.altura, peso: pokemon.peso, categoria: pokemon.categoria, habilidade: pokemon.habilidade})*/ 
 })
 
-
+app.get("/detalhes/:ind", (req, res) => {
+  const indice = req.params.ind;
+  const pokemons = pokedex[indice];
+  res.render("detalhes", { pokemon: pokemons });
+});
 
 app.get("/index", (req,res) => {
   res.send("cadastro")

@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style_cont_cad.css">
+    <link rel="stylesheet" href="/CSS/style_detalhes.css">
     <title>Detalhes</title>
 </head>
     <h1><img src="/img/logo_pokemon.png" alt="Logo Pokemon" width ="500px" height = "227px"></h1>
+    <form action="/cadastro" method="get">
+        <div class= "container">
+                <div class= "imagem_index">
+                    <a href="/index" id= "muda_pag"> <img src="/img/Pikachu_muda_pag.png" alt="Pikachu com um balão dizendo PIKA! PIKA! PIKA! TEM MAIS COISA POR AQUI! CLICA EM MIM PARA MUDARMOS DE PÁGINA! PIKA! CHU!" width ="580px" height = "415px"></a>
+            </div>
+        </form>
 <body>
-   <p>Parabéns você finalizou o cadastro!</p>
-    <p>O nome inserido é: <%= nome %></p>
-    <p>O tipo inserido é: <%= tipo %></p>
-    <p>A imagem inserida é: <%= imagem %></p>
-    <p>A descrição inserida é: <%= descricao %></p>
-    <p>A altura inserida é: <%= altura %></p>
-    <p>A peso inserida é: <%= peso %></p>
-    <p>A categoria inserida é: <%= categoria %></p>
-    <p>A habilidade inserida é: <%= habilidade %></p>
-
-    <footer>
-        <p>Todos os direitos reservados Fredy_Lima® 2021</p>
-    </footer>
+    <div class = "detalhes">
+        <h2>Detalhes do Pokemon</h2>
+        <img src = <%= pokemon.img %> width ="300px" height = "215px">
+        <p>Você escolheu o Pokemon: <%= pokemon.nome %></p>
+        <p>TIPO: <%= pokemon.tipo %></p>
+        <p>DESCRIÇÃO: <%= pokemon.descricao %></p>
+        <p>ALTURA: <%= pokemon.altura %></p>
+        <p>PESO: <%= pokemon.peso %></p>
+        <p>CATEGORIA: <%= pokemon.categoria %></p>
+        <p>HABILIDADE: <%= pokemon.habilidade %></p>
+    
+        <footer>
+            <p>Todos os direitos reservados Fredy_Lima® 2021</p>
+        </footer>
+    </div>
 </body>
 
 </html>

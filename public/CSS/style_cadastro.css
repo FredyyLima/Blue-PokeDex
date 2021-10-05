@@ -55,8 +55,14 @@ input[type=submit]{
     }
 button{
     margin-left:700px;
+    padding: 10px;
+    background-color: #ffee00;
+    border: dashed #0400ff;
 }
-
+button:hover{
+    background-color: #0400ff;
+    color:#ffee00;
+}
 /*Class chama com .(ponto)*/
 
 /*ID chama com #(hashtag)*/
