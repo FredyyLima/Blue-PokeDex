@@ -12,7 +12,7 @@ const pokedex =
 [
   {nome: "Charmander",
   tipo: "Fogo",
-  img: "https://static.wikia.nocookie.net/pokemonet/images/8/87/004CharmanderFRLG.png/revision/latest?cb=20130505000902&path-prefix=pt-br",
+  img: "https://sites.google.com/site/desenho2013/_/rsrc/1308684499489/charmander/charmander.gif",
   descricao: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
   altura: 0.6,
   peso: 8.5,
